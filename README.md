@@ -1,6 +1,7 @@
 # romanNumeral
 
 **My Approach**
+
 I wanted to get the application working first and then add some test cases. I started with a sample express application. I used the following (https://expressjs.com/en/starter/generator.html). Inside the application I went to the routes folder and created a new route called roman (roman.js) I added the conversion logic in the roman.js file. I first added some error checking to make sure the input that was passed in is valid or not. In this case a valid parameter would be a positive number between 1 and 3999. If an invalid input was inserted, the application will throw an error. I created an object called romanNumbers which maps integers to their corresponding roman numeral. This is objects contains the mappings for the following numbers: 1,4,5,9,10,40,50,90,100,400,500,900,10000. I then iterate through the romanNumerals object and subtract the largest possible roman numeral value from the number that was inputted until the number is zero. Througout this process the corresponding roman numeral is appended to the a string called result. I then pass the string into my JSON object to follow the requirements of this assignment `{
               “input” : “1”,
               “output” : “I”
