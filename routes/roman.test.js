@@ -1,11 +1,11 @@
 var chai = require('chai');
 var expect = chai.expect;
 var request = require('supertest');
-var app = require('../app'); // Update the path to your Express.js app file
+var app = require('../app'); 
 
 describe('Roman Numerals Route', function() {
   it('should return the correct Roman numeral for a valid input number', function(done) {
-    var inputNumber = '10'; // Assuming the input is provided as a string
+    var inputNumber = '10'; 
     var expectedOutput = 'X';
   
     request(app)
@@ -16,7 +16,7 @@ describe('Roman Numerals Route', function() {
         if (err) return done(err);
   
         var result = res.body;
-        result.input = parseInt(result.input); // Parse the input as a number
+        result.input = parseInt(result.input); // parse the input as a number
   
         expect(result).to.deep.equal({ input: 10, output: expectedOutput });
         done();
@@ -35,7 +35,7 @@ describe('Roman Numerals Route', function() {
         if (err) return done(err);
   
         var result = res.body;
-        result.input = parseInt(result.input); // Parse the input as a number
+        result.input = parseInt(result.input); // parse the input as a number
   
         expect(result).to.deep.equal({ input: 3999, output: expectedOutput });
         done();
